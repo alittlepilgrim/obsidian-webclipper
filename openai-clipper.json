@@ -1,0 +1,53 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "OpenAI",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n\nSource: [{{site}}]({{url}})\n\n{{content}}",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{site}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "created",
+			"value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		},
+		{
+			"name": "description",
+			"value": "{{title}} - chatgpt archive {{date|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "chatgpt archive",
+			"type": "multitext"
+		},
+		{
+			"name": "uid",
+			"value": "{{date|date:\\\"YYYYMMDD-HHmmss\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"chatgpt.com"
+	],
+	"noteNameFormat": "{{date|date:\"YYYYMMDD\"}}-{{title}}",
+	"path": ""
+}
